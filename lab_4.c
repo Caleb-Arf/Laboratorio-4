@@ -86,12 +86,11 @@ void obtener_elemento(struct nodo* head, int posicion) {
 	struct nodo* actual = head;
 	int valor_actual = 0;
 	while (actual != NULL && valor_actual < posicion) {
-		actual = actual->next;
-	
-		if (actual != NULL) {
+		if (valor == valor_actual) {
 			printf("El elemento en la posición %d es %d.\n", posicion, actual->entero);
 			return;
 		} 
+		actual = actual->next;
 		valor_actual++;
 	}
 	printf("No hay posición %d en la lista.\n", posicion);
