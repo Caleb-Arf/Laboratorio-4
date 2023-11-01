@@ -44,18 +44,18 @@ void borrar_nodo(int valor, struct nodo** head) {
 	while (actual != NULL && actual->entero != valor) {
 		anterior = actual;
 		actual = actual->next;
-	}
 
-	if (actual == NULL) {
-		return;
-	}
+		if (actual == NULL) {
+			return;
+		}
 
-	if (anterior == NULL) {
-		*head = actual->next;
-	} else {
+		if (anterior == NULL) {
+			*head = actual->next;
+		}	 
+		else {
 		anterior->next = actual->next;
+		}
 	}
-
 	free(actual);
 }
 
